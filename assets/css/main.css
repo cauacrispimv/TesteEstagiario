@@ -1,0 +1,16 @@
+/* var */
+
+:root {
+    /* cores */
+    --azulJB: #0088CF;
+    --rosaJB: #D70D88;
+    --amareloJB: #ffc107;
+}
+
+/* geral */
+
+::selection {
+    background-color: gray;
+    color: #fff;
+}
+
