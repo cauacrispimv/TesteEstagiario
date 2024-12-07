@@ -3,14 +3,109 @@
 :root {
     /* cores */
     --azulJB: #0088CF;
-    --rosaJB: #D70D88;
+    --rosaJB: #e83e8c;
     --amareloJB: #ffc107;
+    --cinza-escuroJB: #343a40;
+    --cinza-claroJB: #6c757d;
+}
+
+/* global */
+
+::selection {
+    background-color: var(--cinza-escuroJB);
+    color: #fff;
+}
+
+* {
+    margin: 0 auto;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background:url(https://www.grafjb.com.br/_shared/destaques/big_des28072024182402.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* geral */
 
-::selection {
-    background-color: gray;
-    color: #fff;
+#logoJB{
+    z-index: 2;
+    position: absolute;
+    top: 30px;
 }
+
+.container {
+    background-image: url(https://www.grafjb.com.br/_shared/estaticas/est28072024220533.jpg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.container::before {
+    content: '';
+    background-color: #00000087;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* formulario */
+
+form {
+    z-index: 2;
+    color: #fff;
+    margin-top: 100px;
+}
+
+input{
+    height: 32px;
+    width: 250px;
+    padding-left: 15px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    border: 0px solid;
+    border-radius: 2px;
+}
+
+input[type="submit"] {
+    background-color: var(--rosaJB);
+    color: #fff;
+    margin-top: 15px;
+    padding: 5px;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bolder
+}
+
+input[type="submit"]:hover {
+    background-color: var(--amareloJB);
+}
+
 
