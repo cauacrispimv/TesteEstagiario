@@ -5,10 +5,11 @@ function verificaCampos(event) {
 
   if (nome === "" || email === "" || telefone === "") {
     alert("Todos os campos são obrigatórios.");
-    event.preventDefault();
   } else {
-    console.log(nome, email, telefone);
+    console.log(`Nome: ${nome}; E-mail: ${email}; Telefone: ${telefone}`);
   }
+
+  event.preventDefault();
 }
 
 let form = document.getElementById("formJB");
