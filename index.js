@@ -1,3 +1,5 @@
+let form = document.getElementById("formJB");
+
 function verificaCampos(event) {
   let nome = document.getElementById("nome").value;
   let email = document.getElementById("email").value;
@@ -5,12 +7,18 @@ function verificaCampos(event) {
 
   if (nome === "" || email === "" || telefone === "") {
     alert("Todos os campos são obrigatórios.");
-  } else {
-    console.log(`Nome: ${nome}; E-mail: ${email}; Telefone: ${telefone}`);
+  } 
+  
+  else {
+      console.log(`Nome: ${nome}; E-mail: ${email}; Telefone: ${telefone}`);
+      form.style.visibility = "hidden";
+      
+      setTimeout(() => { 
+        alert('Obrigado por seu cadastro!'); 
+        form.style.visibility = "visible";
+    }, 100);
   }
-
   event.preventDefault();
 }
 
-let form = document.getElementById("formJB");
 form.addEventListener("submit", verificaCampos);
